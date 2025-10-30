@@ -24,7 +24,7 @@ RUN sed -i '/.nix-profile/d' /root/.zshrc
 RUN sed -i '/direnv/d' /root/.zshrc
 RUN sed -i '/cargo/d' /root/.zshrc
 RUN echo "source /root/.zsh-vi-mode/zsh-vi-mode.plugin.zsh" >> /root/.zshrc
-WORKDIR /workspace
+WORKDIR /workspaces
 
 CMD ["zsh"]
 
