@@ -17,14 +17,14 @@ RUN curl -fsSL https://starship.rs/install.sh | sh -s -- -y
 
 RUN rm lsd.deb nvim-linux-x86_64.tar.gz
 
-COPY .config /root/.config
-COPY .local/share /root/.local/share
-COPY .zshrc /root/.zshrc
-RUN sed -i '/.nix-profile/d' /root/.zshrc
-RUN sed -i '/direnv/d' /root/.zshrc
-RUN sed -i '/cargo/d' /root/.zshrc
-RUN echo "source /root/.zsh-vi-mode/zsh-vi-mode.plugin.zsh" >> /root/.zshrc
-WORKDIR /workspaces
+# COPY .config /root/.config
+# COPY .local/share /root/.local/share
+# COPY .zshrc /root/.zshrc
+# RUN sed -i '/.nix-profile/d' /root/.zshrc
+# RUN sed -i '/direnv/d' /root/.zshrc
+# RUN sed -i '/cargo/d' /root/.zshrc
+# RUN echo "source /root/.zsh-vi-mode/zsh-vi-mode.plugin.zsh" >> /root/.zshrc
+# WORKDIR /workspaces
 
 CMD ["zsh"]
 
