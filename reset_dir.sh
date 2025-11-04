@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -rf .local .config .zshrc
+rm -rf to_copy/**
